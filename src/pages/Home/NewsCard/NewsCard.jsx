@@ -1,15 +1,7 @@
 import moment from "moment";
 import React from "react";
 import { Card, Image } from "react-bootstrap";
-import {
-  FaRegBookmark,
-  FaRegEye,
-  FaRegStar,
-  FaRegStarHalf,
-  FaShareAlt,
-  FaStar,
-} from "react-icons/fa";
-import Rating from "react-rating";
+import { FaRegBookmark, FaShareAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const NewsCard = ({ news }) => {
@@ -42,27 +34,12 @@ const NewsCard = ({ news }) => {
           ) : (
             <>
               {details.slice(0, 250)}...
-              <Link to={`/home/${_id}`}>Read More</Link>
+              <Link to={`/news/${_id}`}>Read More</Link>
             </>
           )}
         </Card.Text>
       </Card.Body>
-      <Card.Footer className="text-muted d-flex">
-        <div className="flex-grow-1">
-          <Rating
-            placeholderRating={rating.number}
-            readonly
-            emptySymbol={<FaRegStar />}
-            placeholderSymbol={<FaStar className="text-warning" />}
-            fullSymbol={<FaStar />}
-          ></Rating>
-          <span>{rating?.number}</span>
-        </div>
-        <div>
-          <FaRegEye></FaRegEye>
-          {total_view}
-        </div>
-      </Card.Footer>
+      <Card.Footer></Card.Footer>
     </Card>
   );
 };
