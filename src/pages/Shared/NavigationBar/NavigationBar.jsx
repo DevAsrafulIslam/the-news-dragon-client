@@ -24,7 +24,7 @@ const NavigationBar = () => {
         <Container>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mx-auto">
+            <Nav className="mx-auto d-flex align-items-center">
               <Link
                 className="text-secondary  text-decoration-none"
                 to="/category/0"
